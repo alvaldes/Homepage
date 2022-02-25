@@ -1,209 +1,179 @@
-import Head from 'next/head'
+import NextLink from 'next/link'
+import {
+  Container,
+  Box,
+  Heading,
+  Image,
+  Link,
+  Button,
+  List,
+  Icon,
+  ListItem,
+  useColorModeValue
+} from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import Section from '../components/section'
+import Paragraph from '../components/paragraph'
+import { BioSection, BioYear } from '../components/bio'
+import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa'
+import Banner from '../components/banner'
+import Layout from '../components/layout/article'
 
-export default function Home() {
+const Page = () => {
   return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
+    <Layout>
+      <Container maxW="container.md">
+        <Section delay={0.1}>
+          <Banner />
+          <Box
+            borderRadius="0.5em"
+            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+            p={3}
+            mb={6}
+            align="center"
+            maxW="3xl"
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+            Hello, I&apos; m a Software Engineer base in Cuba!
+          </Box>
+          <Box display={{ md: 'flex' }}>
+            <Box flexGrow={1}>
+              <Heading as="h1" size="lg" variant="page-title">
+                Angel L. Valdés
+              </Heading>
+              <p>Web Developer (Front-end / Back-end / Design)</p>
+            </Box>
+            <Box
+              flexShrink={0}
+              mt={{ base: 4, md: 0 }}
+              ml={{ md: 6 }}
+              align="center"
+            >
+              <Image
+                src="/images/blob.svg"
+                maxWidth="150px"
+                display="inline-block"
+                alt="blob"
+                sx={{ position: 'absolute', zIndex: -1 }}
+              />
+              <Image
+                borderColor="whiteAlpha.800"
+                borderWidth={2}
+                borderStyle="solid"
+                maxWidth="100px"
+                display="inline-block"
+                borderRadius="full"
+                mt={6}
+                ml={6}
+                src="/images/angel.png"
+                alt="Angel Profile Image"
+              />
+            </Box>
+          </Box>
+        </Section>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+        <Section delay={0.2}>
+          <Heading as="h3" variant="section-title">
+            Work
+          </Heading>
+          <Paragraph>
+            Angel is a newly graduated computer engineer offering enthusiasm and
+            innovative ideas. Demonstrated experience in web programming and
+            passionate about dynamic interfaces and clean code. Experienced
+            working with teams to produce impactful, leading-edge websites that
+            engage customers and deliver business results. Well-versed in design
+            standards and user preferences. Background includes responsive
+            designing websites in Agile environments. Exceptional team player
+            with an analytical approach to developing useful solutions.
+            Currently, proyect called{' '}
+            <NextLink href="/works/adwebmanager">
+              <Link>ADWebManager</Link>
+            </NextLink>
+            .
+          </Paragraph>
+          <Box align="center" my={4}>
+            <NextLink href="/works">
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                My Portfolio
+              </Button>
+            </NextLink>
+          </Box>
+        </Section>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
+        <Section delay={0.2}>
+          <Heading as="h3" variant="section-title">
+            Bio
+          </Heading>
+          <BioSection>
+            <BioYear>1997</BioYear>
+            Born in Havana, Cuba.
+          </BioSection>
+          <BioSection>
+            <BioYear>2021</BioYear>
+            Completed the degree in Computer Engineering at Universidad de las
+            Ciencias Informáticas (UCI).
+          </BioSection>
+          <BioSection>
+            <BioYear>2022 to present</BioYear>
+            Works as a Front-end dev at Universidad Tecnológica de La Habana
+            "José Antonio Echeverría" (CUJAE).
+          </BioSection>
+        </Section>
 
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            I{useColorModeValue('🖤', '🤍')}
+          </Heading>
+          <Paragraph>
+            Photography, Design, Swim, Dancing, Karaoke and Coffee
+          </Paragraph>
+        </Section>
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            My Links
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="http://www.twitter.com/alvaldes97" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={FaTwitter} />}
+                >
+                  @alvaldes97
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="http://www.github.com/alvaldes" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={FaGithub} />}
+                >
+                  @alvaldes
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.linkedin.com/in/angel-l-vald%C3%A9s-s%C3%A1nchez-78774b227/"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={FaLinkedin} />}
+                >
+                  @Angel
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
+        </Section>
+      </Container>
+    </Layout>
   )
 }
+
+export default Page
