@@ -22,8 +22,8 @@ const Work = () => (
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>
-          <Link href="https://www.inkdrop.app/">
-            https://www.inkdrop.app/ <ExternalLinkIcon mx="2px" />
+          <Link href="/404">
+            /404 <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
