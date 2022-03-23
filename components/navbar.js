@@ -19,9 +19,21 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import { FaGithub } from 'react-icons/fa'
 
-const LinkItem = ({ href, path, children }) => {
+const LinkItem = ({ href, path, externalLink, children }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+  if (externalLink) {
+    return (
+      <Link
+        href={href}
+        p={2}
+        bg={active ? 'glassTeal' : undefined}
+        color={active ? '#202023' : inactiveColor}
+      >
+        {children}
+      </Link>
+    )
+  }
   return (
     <NextLink href={href}>
       <Link
@@ -74,8 +86,11 @@ const Navbar = props => {
           {/* <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem> */}
-          {/* //TODO: FIX BUG IN EXTERNAL SOUCE LINK  */}
-          <LinkItem href="https://github.com/alvaldes/Homepage" path={path}>
+          <LinkItem
+            href="https://github.com/alvaldes/Homepage"
+            path={path}
+            externalLink
+          >
             <Icon as={FaGithub} w={3.5} h={3.5} /> Source
           </LinkItem>
         </Stack>
