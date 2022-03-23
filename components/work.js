@@ -25,11 +25,12 @@ export const WorkFirstImage = ({ src, alt }) => (
   <Image
     borderRadius="lg"
     w="full"
-    h="5em"
+    h={{ base: '6rem', md: '10rem' }}
     src={src}
     alt={alt}
     mb={4}
     objectFit="cover"
+    objectPosition="top"
   />
 )
 
