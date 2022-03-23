@@ -36,7 +36,7 @@ const Page = () => {
             Hello, I&apos; m a Software Engineer base in Cuba!
           </Box>
           <Box display={{ md: 'flex' }}>
-            <Box flexGrow={1}>
+            <Box flexGrow={1} mt={{ base: 0, md: 10 }}>
               <Heading as="h1" size="lg" variant="page-title">
                 Angel L. Valdés
               </Heading>
@@ -44,26 +44,26 @@ const Page = () => {
             </Box>
             <Box
               flexShrink={0}
-              mt={{ base: 4, md: 0 }}
-              ml={{ md: 6 }}
+              mt={{ base: -4, md: -10 }}
+              ml={{ base: -10, md: 0 }}
               align="center"
             >
               <Image
                 src="/images/blob.svg"
-                maxWidth="150px"
+                maxWidth="300px"
                 display="inline-block"
                 alt="blob"
                 sx={{ position: 'absolute', zIndex: -1 }}
               />
               <Image
-                borderColor="whiteAlpha.800"
-                borderWidth={2}
+                borderColor="teal.300"
+                borderWidth={4}
                 borderStyle="solid"
-                maxWidth="100px"
+                maxWidth="220px"
                 display="inline-block"
                 borderRadius="full"
-                mt={6}
-                ml={6}
+                mt={10}
+                ml={10}
                 src="/images/angel.png"
                 alt="Angel Profile Image"
               />
@@ -157,7 +157,7 @@ const Page = () => {
             </ListItem>
             <ListItem>
               <Link
-                href="https://www.linkedin.com/in/angel-l-vald%C3%A9s-s%C3%A1nchez-78774b227/"
+                href="https://www.linkedin.com/in/angel-l-valdes-sanchez/"
                 target="_blank"
               >
                 <Button
@@ -165,7 +165,7 @@ const Page = () => {
                   colorScheme="teal"
                   leftIcon={<Icon as={FaLinkedin} />}
                 >
-                  @Angel
+                  @angel-l-valdes-sanchez
                 </Button>
               </Link>
             </ListItem>
