@@ -21,9 +21,10 @@ const Work = () => (
       </P>
       <List ml={4} my={4}>
         <ListItem>
-          <Meta>Website</Meta>
-          <Link href="/404">
-            /404 <ExternalLinkIcon mx="2px" />
+          <Meta>Source Code</Meta>
+          <Link href="https://github.com/Universidad-Tecnologica-CUJAE/AD-webmanager">
+            Universidad-Tecnologica-CUJAE / AD-webmanager
+            <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
