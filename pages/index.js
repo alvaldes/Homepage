@@ -85,8 +85,8 @@ const Page = () => {
             designing websites in Agile environments. Exceptional team player
             with an analytical approach to developing useful solutions.
             Currently, proyect called{' '}
-            <NextLink href="/works/adwebmanager">
-              <Link>ADWebManager</Link>
+            <NextLink href="/works/trivial">
+              <Link>Trivial</Link>
             </NextLink>
             .
           </Paragraph>
@@ -128,7 +128,7 @@ const Page = () => {
           </Paragraph>
         </Section>
 
-        <Section delay={0.3}>
+        <Section delay={0.3} id="contact">
           <Heading as="h3" variant="section-title">
             My Links
           </Heading>
