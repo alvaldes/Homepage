@@ -7,7 +7,7 @@ import Layout from '../../components/layout/article'
 const Work = () => (
   <Layout title="Trivial">
     <Container maxW="container.md">
-      <WorkFirstImage src="/images/thumbTrivial.jpg" alt="Trivial" />
+      <WorkFirstImage src="/images/trivial/thumbFirst.jpeg" alt="Trivial" />
       <Title>
         Trivial <Badge>2022-</Badge>
       </Title>
@@ -28,19 +28,19 @@ const Work = () => (
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>
-          <Link href="/404">
-            /404 <ExternalLinkIcon mx="2px" />
+          <Link href="https://trivial.alvaldes.vercel.app">
+            trivial.alvaldes.vercel.app <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
           <Meta>Souce Code</Meta>
-          <Link href="/404">
-            /404 <ExternalLinkIcon mx="2px" />
+          <Link href="https://github.com/alvaldes/Trivial">
+            github.com/alvaldes/Trivial <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
           <Meta>Platform</Meta>
-          <span>Windows/macOS/Linux/iOS/Android</span>
+          <span>Web</span>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
@@ -48,8 +48,11 @@ const Work = () => (
         </ListItem>
       </List>
 
-      <WorkImage src="/images/thumbTrivial.jpg" alt="Trivial" />
-      <WorkImage src="/images/thumbTrivial.jpg" alt="Trivial" />
+      <WorkImage
+        src="/images/trivial/thumbMockup.png"
+        alt="Trivial_Mockup"
+        w="full"
+      />
     </Container>
   </Layout>
 )

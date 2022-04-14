@@ -17,8 +17,8 @@ export const Title = ({ children }) => (
   </Box>
 )
 
-export const WorkImage = ({ src, alt }) => (
-  <Image borderRadius="lg" w="full" src={src} alt={alt} mb={4} />
+export const WorkImage = ({ src, alt, props }) => (
+  <Image borderRadius="lg" src={src} alt={alt} mb={4} {...props} />
 )
 
 export const WorkFirstImage = ({ src, alt }) => (
