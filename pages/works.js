@@ -19,8 +19,8 @@ const Works = () => {
               title="Trivial"
               thumbnail={thumbTrivialCard}
             >
-              A game in which players are asked questions about different topics
-              and they have to get as many correct answers as possible.
+              A game where players are asked questions on different topics and
+              have to get as many answers as possible right.
             </WorkGridItem>
           </Section>
         </SimpleGrid>
