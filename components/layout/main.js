@@ -10,6 +10,16 @@ const Main = ({ children, router }) => {
     <Box as="main" pb={8}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="Software Engineer with skills in web development and clean code"
+        />
+        <meta
+          name="keywords"
+          content="Angel, Valdés, alvaldes, software, code, programming, development, web,"
+        />
+        <meta charset="utf-8" />
+        <meta name="author" content="Angel L. Valdés" />
         <title>Angel Valdés - Homepage</title>
       </Head>
 
