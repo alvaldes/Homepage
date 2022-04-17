@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Box, Container } from '@chakra-ui/react'
 import Navbar from '../navbar.js'
+import CommentForm from '../commentForm.js'
 
 const Main = ({ children, router }) => {
   const d = new Date()
@@ -17,7 +18,8 @@ const Main = ({ children, router }) => {
       <Container maxW="container.lg" pt={14}>
         {children}
       </Container>
-      <Container align="center">
+      <Container align="center" maxW="container.md">
+        <CommentForm id="contact" />
         <Box as="span" color="gray.500">
           &copy; {year} Angel Valdés. All Rights Reserved.
         </Box>
