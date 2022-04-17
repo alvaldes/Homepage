@@ -3,7 +3,7 @@ import Layout from '../components/layout/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 
-import thumb from '../public/images/thumbADwebmanager.jpg'
+import thumb from '../public/images/angel.png'
 
 const Posts = () => (
   <Layout title="Posts">
@@ -21,8 +21,8 @@ const Posts = () => (
 
       <Section delay={0.3}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem title="" thumbnail={thumb} href="/" />
-          <GridItem title="" thumbnail={thumb} href="/" />
+          <GridItem title="post" thumbnail={thumb} href="/" />
+          <GridItem title="post" thumbnail={thumb} href="/" />
         </SimpleGrid>
       </Section>
     </Container>
