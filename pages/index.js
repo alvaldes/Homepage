@@ -29,7 +29,7 @@ const Page = () => {
             borderRadius="0.5em"
             bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
             p={3}
-            mb={6}
+            mb={{ base: 8, md: 14 }}
             align="center"
             maxW="3xl"
           >
@@ -72,7 +72,7 @@ const Page = () => {
         </Section>
 
         <Section delay={0.2}>
-          <Heading as="h3" variant="section-title">
+          <Heading as="h3" variant="section-title" mt={14}>
             Work
           </Heading>
           <Paragraph>
@@ -100,7 +100,7 @@ const Page = () => {
         </Section>
 
         <Section delay={0.2}>
-          <Heading as="h3" variant="section-title">
+          <Heading as="h3" variant="section-title" mt={10}>
             Bio
           </Heading>
           <BioSection>
@@ -120,7 +120,7 @@ const Page = () => {
         </Section>
 
         <Section delay={0.3}>
-          <Heading as="h3" variant="section-title">
+          <Heading as="h3" variant="section-title" mt={10}>
             I{useColorModeValue('🖤', '🤍')}
           </Heading>
           <Paragraph>
@@ -128,8 +128,8 @@ const Page = () => {
           </Paragraph>
         </Section>
 
-        <Section delay={0.3} id="contact">
-          <Heading as="h3" variant="section-title">
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title" mt={10}>
             My Links
           </Heading>
           <List>

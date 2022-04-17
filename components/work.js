@@ -18,7 +18,14 @@ export const Title = ({ children }) => (
 )
 
 export const WorkImage = ({ src, alt, ...props }) => (
-  <Image borderRadius="lg" src={src} alt={alt} mb={4} {...props} />
+  <Image
+    borderRadius="lg"
+    src={src}
+    alt={alt}
+    mb={4}
+    sx={{ cursor: 'pointer' }}
+    {...props}
+  />
 )
 
 export const WorkFirstImage = ({ src, alt }) => (
