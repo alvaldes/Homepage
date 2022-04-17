@@ -3,19 +3,19 @@
 
 ---
 
-👋Hi guys, here is my personal web site. Build as a [Next.js](https://nextjs.org/) project bootstrapped with `[create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)`.
+👋Hi guys, here is my personal web site. Build as a [Next.js](https://nextjs.org/) project bootstrapped with `create-next-app`.
 
 ## 🛠️Built using
 
 ---
 
-[Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
+- [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
 
-[ChackraUI](https://chakra-ui.com/) - A simple, modular and accessible component library for React.
+- [ChackraUI](https://chakra-ui.com/) - A simple, modular and accessible component library for React.
 
-[Framer Motion](https://www.framer.com/motion/) - An animation library for React.
+- [Framer Motion](https://www.framer.com/motion/) - An animation library for React.
 
-[Vercel](https://vercel.com/) - A cloud platform that enables developers to host websites and web services.
+- [Vercel](https://vercel.com/) - A cloud platform that enables developers to host websites and web services.
 
 ## 👟Running locally
 
